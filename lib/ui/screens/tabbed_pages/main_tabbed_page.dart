@@ -23,7 +23,7 @@ class _MainTabbedPage extends State<MainTabbedPage>{
   static final List<Widget> _widgetOptions = [
     const MyHomePage(title: ""),
     Withdraw(),
-    Profile()
+    const Profile()
   ];
 
   void _onItemTapped(int index){

@@ -39,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   }
   @override
   Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
     // TODO: implement build
     return Scaffold(
       body: Container(
@@ -49,8 +50,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
         child: Center(
           child: Image.asset(
               AppImages.stockXLogo,
-            width: 121,
-            height: 166,
+            height: deviceSize.height * 0.15,
           ),
         ),
       ),

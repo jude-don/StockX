@@ -15,5 +15,7 @@ class AppColors{
   static const graphColor3 = Color(0xFF676585);
   static const gradient1 = Color(0xFFEAEAEA);
   static const gradient2 = Color(0xFFFFFFFF);
+  static const textColor = Color(0xFF343434);
+  static const alternateTextColor = Color(0xFF9A9A9A);
 
 }

@@ -4,6 +4,7 @@ class AppStrings{
   static const appName = "StockX";
   static const totalValue = "Total value";
   static const topUp = "Top Up";
+  static const recentInvestment = "Recent investments";
   static const apple = "Apple Inc.";
   static const nike = "Nike Inc";
   static const starbucks = "Starbucks Corp";
@@ -29,5 +30,6 @@ class AppStrings{
   static const accountDetailsTitle = "Account Details";
   static const accountDetailsSubtext = "Edit and Update account details to help us with our KYC process";
   static const logout = "Logout";
+
 
 }
