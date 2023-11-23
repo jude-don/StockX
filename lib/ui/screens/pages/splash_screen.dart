@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stockx/main.dart';
 import 'package:stockx/resources/ui_resources.dart';
+import 'package:stockx/ui/screens/tabbed_pages/main_tabbed_page.dart';
 
 import '../tabbed_pages/home.dart';
 
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     Future.delayed(const Duration(seconds: 3),(){
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-          builder: (_) => const MyHomePage(title: "")
+          builder: (_) => const MainTabbedPage()
       ));
     });
   }
