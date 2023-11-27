@@ -28,7 +28,7 @@ class AppStrings{
   static const referTitle = "Refer a friend";
   static const referSubtext = "Refer a friend to receive amazing discounts and offers";
   static const accountDetailsTitle = "Account Details";
-  static const accountDetailsSubtext = "Edit and Update account details to help us with our KYC process";
+  static const accountDetailsSubtext = "Edit and Update account details to help us with our KYC";
   static const logout = "Logout";
 
 

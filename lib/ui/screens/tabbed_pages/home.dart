@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stockx/resources/ui_resources.dart';
 
 import '../../../models/Stock.dart';
-import '../../components/listItem.dart';
+import '../../components/listI_tem.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});

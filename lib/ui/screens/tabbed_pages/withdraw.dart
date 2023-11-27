@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stockx/resources/ui_resources.dart';
-import 'package:stockx/ui/components/appButton.dart';
+import 'package:stockx/ui/components/app_button.dart';
 
 class Withdraw extends StatefulWidget {
   @override
