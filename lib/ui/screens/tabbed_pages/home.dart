@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: AppColors.primaryColor,
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: 30, bottom: 40),
+        padding: const EdgeInsets.only(top: 30, bottom: 40, right: 18, left: 18),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -158,41 +158,38 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 10.0,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 70.47, left: 80),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    "\$ 25,658.23",
-                    style: GoogleFonts.montserrat(
-                        textStyle: const TextStyle(
-                            color: AppColors.surfaceColor,
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.w700,
-                            fontStyle: FontStyle.normal)),
-                  ),
-                  const SizedBox(
-                    width: 5.0,
-                  ),
-                  Text(
-                    "2.7%",
-                    style: GoogleFonts.montserrat(
-                        textStyle: const TextStyle(
-                            color: Color(0xFF07AA00),
-                            fontSize: 10.0,
-                            fontWeight: FontWeight.w500,
-                            fontStyle: FontStyle.normal)),
-                  ),
-                  const SizedBox(width: 1.72),
-                  const Image(
-                    image: AssetImage('assets/images/arrowup.png'),
-                    height: 7.23,
-                  )
-                ],
-              ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "\$ 25,658.23",
+                  style: GoogleFonts.montserrat(
+                      textStyle: const TextStyle(
+                          color: AppColors.surfaceColor,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w700,
+                          fontStyle: FontStyle.normal)),
+                ),
+                const SizedBox(
+                  width: 5.0,
+                ),
+                Text(
+                  "2.7%",
+                  style: GoogleFonts.montserrat(
+                      textStyle: const TextStyle(
+                          color: Color(0xFF07AA00),
+                          fontSize: 10.0,
+                          fontWeight: FontWeight.w500,
+                          fontStyle: FontStyle.normal)),
+                ),
+                const SizedBox(width: 1.72),
+                const Image(
+                  image: AssetImage('assets/images/arrowup.png'),
+                  height: 7.23,
+                )
+              ],
             ),
             const SizedBox(
               height: 10.0,

@@ -1,7 +1,9 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stockx/resources/ui_resources.dart';
 import 'package:stockx/ui/screens/pages/splash_screen.dart';
+import 'package:stockx/ui/screens/tabbed_pages/main_tabbed_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
@@ -38,7 +41,14 @@ class MyApp extends StatelessWidget {
         //colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: AnimatedSplashScreen(
+        splash: AppImages.stockXLogo ,
+        nextScreen: const MainTabbedPage(),
+        splashTransition: SplashTransition.rotationTransition,
+        splashIconSize: deviceSize.height * 0.15,
+        duration: 3000,
+      ),
+      //home: SplashScreen(),
     );
   }
 }
