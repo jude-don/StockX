@@ -88,9 +88,9 @@ class Profile extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 54, vertical: 16),
-              decoration: const BoxDecoration(
-                  color: AppColors.primaryVariantColor,
-                  borderRadius: BorderRadius.all(Radius.circular(20.0))),
+              decoration: BoxDecoration(
+                  color: AppColors.primaryVariantColor.withOpacity(0.3),
+                  borderRadius: const BorderRadius.all(Radius.circular(20.0))),
               child: Text(
                 AppStrings.username,
                 style: GoogleFonts.montserrat(
