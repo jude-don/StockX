@@ -86,7 +86,14 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: AppColors.primaryColor,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(
+            "Stock X",
+            style: GoogleFonts.montserrat(
+                textStyle: const TextStyle(
+                    color: AppColors.surfaceColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                    fontStyle: FontStyle.normal))),
         leading: Padding(
           padding: const EdgeInsets.only(left: 18.0, top: 12.0, bottom: 12.0),
           child: Image(
@@ -218,7 +225,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _buildLowerContent() {
     return Container(
-      padding: const EdgeInsets.only(right: 18.0, left: 18.0, top: 30, bottom: 20 ),
+      padding:
+          const EdgeInsets.only(right: 18.0, left: 18.0, top: 30, bottom: 20),
       decoration: const BoxDecoration(color: AppColors.surfaceColor),
       width: double.infinity,
       child: Column(
@@ -243,15 +251,14 @@ class _MyHomePageState extends State<MyHomePage> {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: stocks.length,
-            itemBuilder: (context,index){
-             Stock item = stocks[index];
+            itemBuilder: (context, index) {
+              Stock item = stocks[index];
               return listItem(
-                item.image ?? '',
-                item.stockName ?? '',
-                item.companyName ?? '',
-                item.amount ?? '',
-                item.difference ?? ''
-              );
+                  item.image ?? '',
+                  item.stockName ?? '',
+                  item.companyName ?? '',
+                  item.amount ?? '',
+                  item.difference ?? '');
             },
           )
         ],
@@ -398,7 +405,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ],
     );
   }
-
-
-
 }

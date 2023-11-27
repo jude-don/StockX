@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:stockx/main.dart';
 import 'package:stockx/resources/ui_resources.dart';
 import 'package:stockx/ui/screens/tabbed_pages/main_tabbed_page.dart';
 
-import '../tabbed_pages/home.dart';
 
 class SplashScreen extends StatefulWidget{
   @override

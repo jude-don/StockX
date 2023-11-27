@@ -107,3 +107,4 @@ Widget listItem(String imageLogo, String stockName, String stockCompany, String 
     ),
   );
 }
+
