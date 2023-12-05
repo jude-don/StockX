@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stockx/resources/ui_resources.dart';
 
-Widget appButton(String text, Function() onClick ){
+Widget appButton(String text, void Function() onClick ){
   return ElevatedButton(
     onPressed: onClick,
     style: ElevatedButton.styleFrom(

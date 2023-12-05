@@ -2,6 +2,7 @@ import 'package:currency_text_input_formatter/currency_text_input_formatter.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stockx/resources/ui_resources.dart';
 import 'package:stockx/ui/components/app_button.dart';
@@ -15,6 +16,14 @@ class Withdraw extends StatefulWidget {
 }
 
 class _WithdrawState extends State<Withdraw> {
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is removed from the
+    // widget tree.
+    myController.dispose();
+    super.dispose();
+  }
+  final myController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -111,6 +120,7 @@ class _WithdrawState extends State<Withdraw> {
               height: 10.0,
             ),
             TextField(
+              controller: myController,
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                     border: InputBorder.none, hintText: '\$0.00'),
@@ -127,7 +137,8 @@ class _WithdrawState extends State<Withdraw> {
                         color: AppColors.textColor,
                         fontSize: 30.0,
                         fontWeight: FontWeight.w700,
-                        fontStyle: FontStyle.normal))),
+                        fontStyle: FontStyle.normal))
+            ),
             const SizedBox(
               height: 62.0,
             )
@@ -214,7 +225,7 @@ class _WithdrawState extends State<Withdraw> {
           const SizedBox(height: 15.0),
           _chargesInfo(AppStrings.totalCharge, "\$ 5.20", AppColors.textColor, FontWeight.w700),
           const SizedBox(height: 60.0),
-          appButton(AppStrings.withdraw, () => null),
+          appButton(AppStrings.withdraw, () => toastFunction(myController.text)),
           const SizedBox(height: 60.0),
         ],
       ),
@@ -249,4 +260,16 @@ class _WithdrawState extends State<Withdraw> {
       ],
     );
   }
+  void toastFunction(String text){
+    Fluttertoast.showToast(
+        msg: "Successfully debited $text",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+  }
+
 }
